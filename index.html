@@ -1,209 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Galeria de Slideshow - Paisagens Brasileiras</title>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Ocultar as imagens por padrão */
-.mySlides {
-  display: none;
-}
-
-/* Estilo para as imagens */
-.mySlides img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  vertical-align: middle;
-}
-
-/* Botões anterior/próximo */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  transition: 0.6s ease;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Posicionar o botão "próximo" à direita */
-.next {
-  right: 20px;
-}
-
-/* Posicionar o botão "anterior" à esquerda */
-.prev {
-  left: 20px;
-}
-
-/* Ao passar o mouse, adicionar cor de fundo preta com um pouco de transparência */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.9);
-  transform: scale(1.1);
-}
-
-/* Texto da legenda */
-.text {
-  color: #fff;
-  font-size: 18px;
-  padding: 16px 20px;
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  font-weight: bold;
-}
-
-/* Número da imagem (1/6 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 14px;
-  padding: 10px 15px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: rgba(0,0,0,0.6);
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-/* Container das miniaturas */
-.thumbnail-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 10px;
-}
-
-/* As miniaturas */
-.thumbnail {
-  cursor: pointer;
-  height: 80px;
-  width: 120px;
-  border-radius: 5px;
-  overflow: hidden;
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  border: 3px solid transparent;
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.thumbnail:hover {
-  opacity: 0.9;
-  transform: translateY(-5px);
-}
-
-.thumbnail.active {
-  opacity: 1;
-  border-color: #2196F3;
-  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.4);
-}
-
-/* Animação de fade */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-  .mySlides img {
-    height: 400px;
-  }
-  
-  .prev, .next {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    padding: 12px;
-  }
-  
-  .thumbnail {
-    height: 60px;
-    width: 90px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .mySlides img {
-    height: 300px;
-  }
-  
-  .text {
-    font-size: 16px;
-    padding: 12px 15px;
-    bottom: 10px;
-  }
-  
-  .thumbnail-container {
-    gap: 6px;
-  }
-  
-  .thumbnail {
-    height: 50px;
-    width: 70px;
-  }
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-  padding: 20px;
-  margin: 0;
-}
-
-h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-p {
-  text-align: center;
-  color: #666;
-  margin-bottom: 30px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galeria de Slideshow - Paisagens Brasileiras</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -212,137 +13,71 @@ p {
 
 <!-- Container do slideshow -->
 <div class="slideshow-container">
-  <!-- Imagens completas com número e legenda -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 6</div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Iguazu_Cataratas2.jpg" alt="Cataratas do Iguaçu">
-    <div class="text">Cataratas do Iguaçu - Foz do Iguaçu/PR</div>
-  </div>
+    <!-- Imagens completas com número e legenda -->
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Iguazu_Cataratas2.jpg" alt="Cataratas do Iguaçu">
+        <div class="text">Cataratas do Iguaçu - Foz do Iguaçu/PR</div>
+    </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 6</div>
-    <img src="https://www.gov.br/turismo/pt-br/assuntos/noticias/parque-nacional-dos-lencois-maranhenses-e-reconhecido-como-patrimonio-natural-da-humanidade/CrditoguilhermespenglerShutterstock.png/@@images/5faf9a18-2c4d-49b2-bb40-990f2bb18803.png" alt="Lençóis Maranhenses">
-    <div class="text">Lençóis Maranhenses - Maranhão</div>
-  </div>
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="https://www.gov.br/turismo/pt-br/assuntos/noticias/parque-nacional-dos-lencois-maranhenses-e-reconhecido-como-patrimonio-natural-da-humanidade/CrditoguilhermespenglerShutterstock.png/@@images/5faf9a18-2c4d-49b2-bb40-990f2bb18803.png" alt="Lençóis Maranhenses">
+        <div class="text">Lençóis Maranhenses - Maranhão</div>
+    </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 6</div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzduHKIFFycW8zauhDv3CX5zvC50fohUkG4Q&s" alt="Fernando de Noronha">
-    <div class="text">Fernando de Noronha - Pernambuco</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 6</div>
-    <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/10/chapada-diamantina.jpg" alt="Chapada Diamantina">
-    <div class="text">Chapada Diamantina - Bahia</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">5 / 6</div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbqJ4OcEF7juECvxrLqP9MBwPX6N-w0jjSA&s" alt="Pantanal">
-    <div class="text">Pantanal - Mato Grosso do Sul</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">6 / 6</div>
-    <img src="https://www.viagenscinematograficas.com.br/wp-content/uploads/2019/02/Noronha-Baia-do-Sancho-Melhor-Praia-Capa-2.jpg" alt="Praia do Sancho">
-    <div class="text">Praia do Sancho - Fernando de Noronha/PE</div>
-  </div>
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzduHKIFFycW8zauhDv3CX5zvC50fohUkG4Q&s" alt="Fernando de Noronha">
+        <div class="text">Fernando de Noronha - Pernambuco</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/10/chapada-diamantina.jpg" alt="Chapada Diamantina">
+        <div class="text">Chapada Diamantina - Bahia</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbqJ4OcEF7juECvxrLqP9MBwPX6N-w0jjSA&s" alt="Pantanal">
+        <div class="text">Pantanal - Mato Grosso do Sul</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="https://www.viagenscinematograficas.com.br/wp-content/uploads/2019/02/Noronha-Baia-do-Sancho-Melhor-Praia-Capa-2.jpg" alt="Praia do Sancho">
+        <div class="text">Praia do Sancho - Fernando de Noronha/PE</div>
+    </div>
 
-  <!-- Botões anterior e próximo -->
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+    <!-- Botões anterior e próximo -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 
 <!-- As miniaturas -->
 <div class="thumbnail-container">
-  <div class="thumbnail active" onclick="currentSlide(1)">
-    <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cataratas do Iguaçu">
-  </div>
-  <div class="thumbnail" onclick="currentSlide(2)">
-    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Lençóis Maranhenses">
-  </div>
-  <div class="thumbnail" onclick="currentSlide(3)">
-    <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Fernando de Noronha">
-  </div>
-  <div class="thumbnail" onclick="currentSlide(4)">
-    <img src="https://images.unsplash.com/photo-1587332066582-21e1ec3d8d30?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Chapada Diamantina">
-  </div>
-  <div class="thumbnail" onclick="currentSlide(5)">
-    <img src="https://images.unsplash.com/photo-1582657118097-31e4e0c641bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Pantanal">
-  </div>
-  <div class="thumbnail" onclick="currentSlide(6)">
-    <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Praia do Sancho">
-  </div>
+    <div class="thumbnail active" onclick="currentSlide(1)">
+        <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cataratas do Iguaçu">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(2)">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Lençóis Maranhenses">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(3)">
+        <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Fernando de Noronha">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(4)">
+        <img src="https://images.unsplash.com/photo-1587332066582-21e1ec3d8d30?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Chapada Diamantina">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(5)">
+        <img src="https://images.unsplash.com/photo-1582657118097-31e4e0c641bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Pantanal">
+    </div>
+    <div class="thumbnail" onclick="currentSlide(6)">
+        <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Praia do Sancho">
+    </div>
 </div>
 
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Controle próximo/anterior
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Controle da imagem em miniatura
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let thumbnails = document.getElementsByClassName("thumbnail");
-  
-  // Verificar limites
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  
-  // Ocultar todos os slides
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  
-  // Remover classe 'active' de todas as miniaturas
-  for (i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-  }
-  
-  // Mostrar slide atual e ativar miniatura correspondente
-  slides[slideIndex-1].style.display = "block";
-  thumbnails[slideIndex-1].className += " active";
-}
-
-// Slideshow automático (opcional - descomente para ativar)
-let slideInterval;
-
-function startAutoSlide() {
-  slideInterval = setInterval(() => {
-    plusSlides(1);
-  }, 4000);
-}
-
-function stopAutoSlide() {
-  clearInterval(slideInterval);
-}
-
-// Iniciar slideshow automático
-startAutoSlide();
-
-// Pausar ao passar o mouse sobre o slideshow
-document.querySelector('.slideshow-container').addEventListener('mouseenter', stopAutoSlide);
-document.querySelector('.slideshow-container').addEventListener('mouseleave', startAutoSlide);
-
-// Adicionar suporte a teclado
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'ArrowLeft') {
-    plusSlides(-1);
-  } else if (event.key === 'ArrowRight') {
-    plusSlides(1);
-  }
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
